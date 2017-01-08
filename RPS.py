@@ -5,6 +5,7 @@ from random import randint
 from random import choice, sample
 
 def mainGame():
+        #subfunctions
         def exceptionHandle():
                 userAnswerCont = False
                 while userAnswerCont == False:
@@ -139,14 +140,11 @@ def mainGame():
                                 print("You win! " + 'Scissors ' +'cut ' + 'paper' + "!")
                                 userScore = userScore + 1
 #If player invokes EXIT command ----------------------------------------------------------------
-                elif userAnswer == 'exit':
+                elif userAnswer.lower() == 'exit':
                                 time.sleep(0.5)
                                 print("Goodbye " + userNameA + "!" )
                                 exit()
 #TESTING-----------------------------------------------------------------------------------------                                
-               # elif userAnswer == 'test':
-        #               print("TESTING")
-
 
 #This is to restart game, giving the option for new enemy, and to input new username. ----------
                 elif userAnswer.lower() == 'restart':
