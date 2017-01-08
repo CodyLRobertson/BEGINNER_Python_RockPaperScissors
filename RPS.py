@@ -5,6 +5,16 @@ from random import randint
 from random import choice, sample
 
 def mainGame():
+        def exceptionHandle():
+                userAnswerCont = False
+                while userAnswerCont == False:
+                        print("Invalid Answer.")
+                        time.sleep(0.5)
+                        print("Please try again.")
+                        time.sleep(.5)
+                        break
+                
+                                
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -27,14 +37,15 @@ def mainGame():
                         print ("Then let us begin " + userNameA + ".")
                         print("     ")
                         break
-                else:
-                        confirmExit = input("Are you sure? Y/N?    ")
+                elif confirmGame.lower().startswith('n'):
+                        confirmExit = input("Are you sure?")
                         if confirmExit.lower().startswith('n'):
                                 print("Alright, then let us continue.")
-                                print("      ")
-                                continue
+                                print("           ")
                                 time.sleep(0.5)
-                        else:
+                                continue
+                        
+                        elif confirmGame.lower().startswith('y'):
                                 print("Goodbye " + userNameA+".")
                                 time.sleep(0.5)
                                 print("Exiting in 3....")
@@ -44,6 +55,11 @@ def mainGame():
                                 print("1.")
                                 time.sleep(0.5)
                                 exit()
+                        else:
+                                exceptionHandle()
+                        
+                else:
+                        exceptionHandle()
                 
 
 
@@ -127,13 +143,16 @@ def mainGame():
                                 time.sleep(0.5)
                                 print("Goodbye " + userNameA + "!" )
                                 exit()
+#TESTING-----------------------------------------------------------------------------------------                                
+               # elif userAnswer == 'test':
+        #               print("TESTING")
 
 
 #This is to restart game, giving the option for new enemy, and to input new username. ----------
                 elif userAnswer.lower() == 'restart':
                         time.sleep(0.5)
                         print ("RESTARTING....")
-                        time.sleep(1)
+                        time.sleep(0.5)
                         mainGame()
 
 
@@ -195,23 +214,7 @@ def mainGame():
                         print("      ")
 #This is to catch spelling errors, and give the option to quit. ---------------------------
                 else:
-                        userAnswerCont = False
-                        while userAnswerCont == False:
-                                print("Invalid Answer.")
-                                time.sleep(0.5)
-                                print("Please try again.")
-                                time.sleep(.5)
-                                print('Continue?')
-                                time.sleep(.5)
-                                print('  ')
-                                userCont = input('')
-                                if userCont.lower().startswith('y'):
-                                        userAnswerCont = True
-                                else:
-                                        userCont = False
-                                userAnswer == userCont
-                                
-                        
+                        exceptionHandle()
  
 
 #Resets loops conditions as well as creates new bot answer.------------------------------
