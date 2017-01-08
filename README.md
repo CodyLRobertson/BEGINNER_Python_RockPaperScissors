@@ -1,7 +1,7 @@
 # Beginner_RockPaperScissors
 This is a beginner program to play the classic game, Rock-Paper-Scissors.
 
-TO READ CHANGELOG, SWITCH TO BLAME OR ORIGINAL VIEW
+TO READ CHANGELOG, SWITCH TO BLAME OR RAW VIEW
 -----------CHANGELOG----------
 01/08/17
 Added Exception handling.
