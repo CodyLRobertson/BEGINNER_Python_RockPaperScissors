@@ -30,3 +30,9 @@ Deleted old TEST command else statement.
 Added username confirmation block
 
 Added username confirmation exception handeling for invalid response to confirmation
+
+Added timeHandle() so as to print date and time. *Will add additional formatting at a later time.
+
+Fixed issue where during secondary confirmation of gameplay, if you stated you did not want to continue, it threw exceptionHandle()
+
+

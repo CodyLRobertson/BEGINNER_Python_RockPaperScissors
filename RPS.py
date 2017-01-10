@@ -9,6 +9,7 @@ from datetime import datetime
 
 
 def mainGame():
+        #Subfunctions
         def timeHandle():
                 today = datetime.today()
                 todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
@@ -16,7 +17,8 @@ def mainGame():
                 print (todayCal)
                 time.sleep(0.5)
                 print(todayClock)
-        #subfunctions
+                time.sleep(0.5)
+
         def exceptionHandle():
                 userAnswerCont = False
                 while userAnswerCont == False:
