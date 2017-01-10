@@ -14,7 +14,7 @@ def mainGame():
                         print("Please try again.")
                         time.sleep(.5)
                         break
-                
+              
                                 
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
@@ -27,7 +27,17 @@ def mainGame():
 
 
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
-        userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ").lower()
+        confirmUsername = False
+        while confirmUsername == False:
+                userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
+                time.sleep(0.5)
+                confirmUsername_A = input("Confrim '" + userNameA + "' as your username? Y/N   ")
+                if confirmUsername_A.lower().startswith('y'):
+                        confirmUsername = True
+                elif confirmUsername_A.lower().startswith('n'):
+                        confirmUsername = False
+                else:
+                        exceptionHandle()
         playGame = "y"
         while playGame == "y":
                 time.sleep(0.5)
