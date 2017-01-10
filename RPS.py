@@ -3,8 +3,22 @@ import random
 import string
 from random import randint
 from random import choice, sample
+import datetime
+from datetime import datetime
+
+
 
 def mainGame():
+        #Subfunctions
+        def callTime():
+                today = datetime.today()
+                todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
+                todayClock = ('%s:%s:%s' % (today.hour, today.minute, today.second))
+                print (todayCal)
+                time.sleep(0.5)
+                print(todayClock)
+                time.sleep(0.5)
+
         def exceptionHandle():
                 userAnswerCont = False
                 while userAnswerCont == False:
@@ -14,7 +28,21 @@ def mainGame():
                         time.sleep(.5)
                         break
                 
-                                
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        callTime()
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -26,7 +54,17 @@ def mainGame():
 
 
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
-        userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ").lower()
+        confirmUsername = False
+        while confirmUsername == False:
+                userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
+                time.sleep(0.5)
+                confirmUsername_A = input("Confirm '" + userNameA + "' as your username? Y/N   ")
+                if confirmUsername_A.lower().startswith('y'):
+                        confirmUsername = True
+                elif confirmUsername_A.lower().startswith('n'):
+                        confirmUsername = False
+                else:
+                        exceptionHandle()
         playGame = "y"
         while playGame == "y":
                 time.sleep(0.5)
@@ -43,7 +81,7 @@ def mainGame():
                                 print("Alright, then let us continue.")
                                 print("           ")
                                 time.sleep(0.5)
-                                continue
+                                break
                         
                         elif confirmGame.lower().startswith('y'):
                                 print("Goodbye " + userNameA+".")
@@ -139,14 +177,11 @@ def mainGame():
                                 print("You win! " + 'Scissors ' +'cut ' + 'paper' + "!")
                                 userScore = userScore + 1
 #If player invokes EXIT command ----------------------------------------------------------------
-                elif userAnswer == 'exit':
+                elif userAnswer.lower() == 'exit':
                                 time.sleep(0.5)
                                 print("Goodbye " + userNameA + "!" )
                                 exit()
 #TESTING-----------------------------------------------------------------------------------------                                
-               # elif userAnswer == 'test':
-        #               print("TESTING")
-
 
 #This is to restart game, giving the option for new enemy, and to input new username. ----------
                 elif userAnswer.lower() == 'restart':
@@ -212,6 +247,9 @@ def mainGame():
                         print("MINUSP --- Subtracts one point from PLAYER.")
                         print("MINUSB --- Subtracts one point from OPPONENT.")
                         print("      ")
+                #callTime
+                elif userAnswer.lower() == 'time':
+                        callTime()
 #This is to catch spelling errors, and give the option to quit. ---------------------------
                 else:
                         exceptionHandle()
