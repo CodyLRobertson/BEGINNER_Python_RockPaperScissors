@@ -10,7 +10,7 @@ from datetime import datetime
 
 def mainGame():
         #Subfunctions
-        def timeHandle():
+        def callTime():
                 today = datetime.today()
                 todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
                 todayClock = ('%s:%s:%s' % (today.hour, today.minute, today.second))
@@ -28,7 +28,7 @@ def mainGame():
                         time.sleep(.5)
                         break
                 
-        timeHandle()
+        callTime()
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -233,6 +233,9 @@ def mainGame():
                         print("MINUSP --- Subtracts one point from PLAYER.")
                         print("MINUSB --- Subtracts one point from OPPONENT.")
                         print("      ")
+                #callTime
+                elif userAnswer.lower() == 'time':
+                        callTime()
 #This is to catch spelling errors, and give the option to quit. ---------------------------
                 else:
                         exceptionHandle()
