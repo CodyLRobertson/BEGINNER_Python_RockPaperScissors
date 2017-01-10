@@ -1,7 +1,7 @@
 # Beginner_RockPaperScissors
 This is a beginner program to play the classic game, Rock-Paper-Scissors.
 
-TO READ CHANGELOG, SWITCH TO BLAME OR RAW VIEW
+Developers: Cody Robertson (Unlinkedcody)
 
 -----------CHANGELOG----------
 
