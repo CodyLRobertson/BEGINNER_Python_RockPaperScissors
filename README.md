@@ -41,3 +41,5 @@ Fixed issue where during secondary confirmation of gameplay, if you stated you d
 Changed timeHandle() to callTime()
 
 added "time" command
+
+Added beginning GUI code
