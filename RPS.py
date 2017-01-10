@@ -3,8 +3,19 @@ import random
 import string
 from random import randint
 from random import choice, sample
+import datetime
+from datetime import datetime
+
+
 
 def mainGame():
+        def timeHandle():
+                today = datetime.today()
+                todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
+                todayClock = ('%s:%s:%s' % (today.hour, today.minute, today.second))
+                print (todayCal)
+                time.sleep(0.5)
+                print(todayClock)
         #subfunctions
         def exceptionHandle():
                 userAnswerCont = False
@@ -14,8 +25,8 @@ def mainGame():
                         print("Please try again.")
                         time.sleep(.5)
                         break
-              
-                                
+                
+        timeHandle()
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -31,7 +42,7 @@ def mainGame():
         while confirmUsername == False:
                 userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
                 time.sleep(0.5)
-                confirmUsername_A = input("Confrim '" + userNameA + "' as your username? Y/N   ")
+                confirmUsername_A = input("Confirm '" + userNameA + "' as your username? Y/N   ")
                 if confirmUsername_A.lower().startswith('y'):
                         confirmUsername = True
                 elif confirmUsername_A.lower().startswith('n'):
@@ -54,7 +65,7 @@ def mainGame():
                                 print("Alright, then let us continue.")
                                 print("           ")
                                 time.sleep(0.5)
-                                continue
+                                break
                         
                         elif confirmGame.lower().startswith('y'):
                                 print("Goodbye " + userNameA+".")
