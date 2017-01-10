@@ -5,7 +5,8 @@ from random import randint
 from random import choice, sample
 import datetime
 from datetime import datetime
-
+import tkinter
+from tkinter import *
 
 
 def mainGame():
@@ -27,9 +28,30 @@ def mainGame():
                         print("Please try again.")
                         time.sleep(.5)
                         break
-                
+                        
 
-        callTime()
+
+
+
+
+        ######------GUI SECTION---------#########
+        root = Tk()
+        root.title("RPS in Python")
+        
+        # Code to add widgets will go here...
+        root.mainloop()
+        button1 = Button(root, text="button1")
+        button2 = Button(root, text="button2")
+        button3 = Button(root, text="button3")
+
+        text = Entry(root)
+        listbox = Listbox(root)
+        
+
+
+
+
+
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -41,6 +63,7 @@ def mainGame():
 
 
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
+        callTime()
         confirmUsername = False
         while confirmUsername == False:
                 userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
@@ -280,7 +303,7 @@ mainGame()
                 #Optional TIE = DIE mode where tieing in game causes score to either RESET or subtract from both players.
                 #TUG OF WAR gamemode where TIEING causes you to steal the opponent's current score.
                 
-                
+                #Implement Graphical User Interface
 
 
 
