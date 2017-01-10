@@ -36,5 +36,3 @@ Added timeHandle() so as to print date and time. *Will add additional formatting
 Fixed issue where during secondary confirmation of gameplay, if you stated you did not want to continue, it threw exceptionHandle()
 
 
-
-
