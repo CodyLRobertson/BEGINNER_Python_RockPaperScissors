@@ -12,3 +12,7 @@ Replaced else statement exception handle with exceptionHandling()
 Removed continue prompt when exceptionHandling() is called.
 Added.lower() to exit command so that variances in capitalization do not throw exceptionHandle()
 Deleted old TEST command else statement.
+
+01/09/17
+Added username confirmation block
+Added username confirmation exception handeling for invalid response to confirmation
