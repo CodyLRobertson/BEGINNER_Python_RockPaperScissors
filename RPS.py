@@ -28,6 +28,7 @@ def mainGame():
                         time.sleep(.5)
                         break
                 
+
         callTime()
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
