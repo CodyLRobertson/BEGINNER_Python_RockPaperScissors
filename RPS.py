@@ -35,17 +35,35 @@ def mainGame():
 
 
         ######------GUI SECTION---------#########
+        #www.usingpython.com/using-tkinter/   used to help build section
+        #Create a new window
         root = Tk()
-        root.title("RPS in Python")
-        
-        # Code to add widgets will go here...
-        root.mainloop()
-        button1 = Button(root, text="button1")
-        button2 = Button(root, text="button2")
-        button3 = Button(root, text="button3")
+        #Create a label widget called 'lbl'
+        lbl = Label(root, text="Label")
 
-        text = Entry(root)
-        listbox = Listbox(root)
+        ent = Entry(root)
+
+        btn = Button(root, text="Button")
+
+        
+        #Set window title
+        root.title("RPS in Python")
+        #Set the window size
+        root.geometry("800x800")
+        #Set the window icon
+        root.wm_iconbitmap('RPS.ico')
+
+        lbl.pack()
+        ent.pack()
+        btn.pack()
+        #Draw the window, and start the 'application'
+        root.mainloop()
+        
+        
+
+        
+
+        
         
 
 
