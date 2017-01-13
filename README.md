@@ -43,3 +43,9 @@ Changed timeHandle() to callTime()
 added "time" command
 
 Added beginning GUI code
+
+(01/12/17)
+
+Added RPS.ico *Unfortunately, it needs to be put directly into the folder containing RPS.py
+
+Added and implemented more GUI coding.
