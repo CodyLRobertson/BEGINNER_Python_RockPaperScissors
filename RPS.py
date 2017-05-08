@@ -83,7 +83,7 @@ def mainGame():
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
         callTime()
         confirmUsername = False
-        while confirmUsername == False:
+        wile confirmUsername == False:
                 userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
                 time.sleep(0.5)
                 confirmUsername_A = input("Confirm '" + userNameA + "' as your username? Y/N   ")
