@@ -49,3 +49,8 @@ Added beginning GUI code
 Added RPS.ico *Unfortunately, it needs to be put directly into the folder containing RPS.py
 
 Added and implemented more GUI coding.
+
+
+(05/15/17)
+
+Corrected "while" command error
