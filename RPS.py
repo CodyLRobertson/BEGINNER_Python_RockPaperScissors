@@ -39,17 +39,19 @@ def mainGame():
         #Create a new window
         root = Tk()
         #Create a label widget called 'lbl'
-        lbl = Label(root, text="Label")
+        lbl = Label(root, text="Select your choice below")
 
         ent = Entry(root)
 
-        btn = Button(root, text="Button")
+        btnrock = Button(root, text="Rock")
+        btnscis = Button(root, text="Scissors")
+        btnPape = Button(root, text="Paper")
 
         
         #Set window title
         root.title("RPS in Python")
         #Set the window size
-        root.geometry("800x800")
+        root.geometry("1000x1000")
         #Set the window icon
         root.wm_iconbitmap('RPS.ico')
 
