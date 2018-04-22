@@ -34,32 +34,32 @@ def mainGame():
 
 
 
-        ######------GUI SECTION---------#########
+    #    ######------GUI SECTION---------#########
         #www.usingpython.com/using-tkinter/   used to help build section
         #Create a new window
-        root = Tk()
+     #   root = Tk()
         #Create a label widget called 'lbl'
-        lbl = Label(root, text="Select your choice below")
+      #  lbl = Label(root, text="Select your choice below")
 
-        ent = Entry(root)
+      #  ent = Entry(root)
 
-        btnrock = Button(root, text="Rock")
-        btnscis = Button(root, text="Scissors")
-        btnPape = Button(root, text="Paper")
+     #   btnrock = Button(root, text="Rock")
+     #   btnscis = Button(root, text="Scissors")
+    #    btnPape = Button(root, text="Paper")
 
         
         #Set window title
-        root.title("RPS in Python")
+     #   root.title("RPS in Python")
         #Set the window size
-        root.geometry("1000x1000")
+      #  root.geometry("800x800")
         #Set the window icon
-        root.wm_iconbitmap('RPS.ico')
+      #  root.wm_iconbitmap('RPS.ico')
 
-        lbl.pack()
-        ent.pack()
-        btn.pack()
+     #   lbl.pack()
+     #   ent.pack()
+     #   btn.pack()
         #Draw the window, and start the 'application'
-        root.mainloop()
+    #    root.mainloop()
         
         
 
