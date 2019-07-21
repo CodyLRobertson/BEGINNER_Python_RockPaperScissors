@@ -28,11 +28,6 @@ def mainGame():
                         print("Please try again.")
                         time.sleep(.5)
                         break
-                        
-
-
-
-
 
     #    ######------GUI SECTION---------#########
         #www.usingpython.com/using-tkinter/   used to help build section
@@ -61,17 +56,6 @@ def mainGame():
         #Draw the window, and start the 'application'
     #    root.mainloop()
         
-        
-
-        
-
-        
-        
-
-
-
-
-
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -80,8 +64,6 @@ def mainGame():
         randomLetter1 = random.choice(string.ascii_uppercase)
         randomLetter2 = random.choice(string.ascii_lowercase)
         nonPlayer = randomLetter1 + randomLetter2 + randomNumber1 + randomNumber2 + randomNumber3 + randomNumber4
-
-
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
         callTime()
         confirmUsername = False
@@ -128,13 +110,6 @@ def mainGame():
                         
                 else:
                         exceptionHandle()
-                
-
-
-                                                
-
-
-
 #Create list of play options
         rpsList = ['r',"p","s"]
 #Comment lists for random comments when a certain perimeter is met.
