@@ -140,6 +140,7 @@ def mainGame():
                 time.sleep(0.5)
 #set player to TRUE
                 print("Type Rock, Paper, or Scissors to play!")
+                print('Type "Dev" for Developer Commands *FOR DEVELOPER USE ONLY* or for cheating... Your call. ')
                 print("Type EXIT to quit, RESET to reset scores or RESTART for a new game. ")
                 print("    ")
                 userAnswer = input("").lower()
