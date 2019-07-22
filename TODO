@@ -1,0 +1,12 @@
+--------------TODO-------------
+Immediate--
+Add custom time dilation based on user input (customTimeVar)
+
+FUTURE---
+#SETTINGS MENU that will change the nature of the game when accessed. Game will default to normal settings if not invoked.
+#Options to choose BEST OUT OF THREE, BEST OUT OF TEN, UNLIMITED, or 1 ROUND.
+#Option to keep highschore on unlimited setting using locally stored text file?
+#Option to choose 1, 2, 3, or Arrow keys to correlate with rock paper or scissors
+#Optional TIE = DIE mode where tieing in game causes score to either RESET or subtract from both players.
+#TUG OF WAR gamemode where TIEING causes you to steal the opponent's current score.              
+#Implement Graphical User Interface

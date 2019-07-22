@@ -1,0 +1,59 @@
+-----------CHANGELOG----------
+
+(7/22/19)
+Created Seperate Changelog File (Removed from README)
+Wrapped .py into .exe
+Added Version Print Statement
+Added Running Buglist
+Added TODO List
+Added infrastructure for custom time dilation (Incomplete)
+
+(01/08/17)
+
+Added Exception handling.
+
+Reduced time.sleep() function from (1) to (.5) on majority of responses.
+
+Fixed formatting errors causing indention and spacing exceptions.
+
+Added function exceptionHandling()
+
+Replaced else statement exception handle with exceptionHandling()
+
+Removed continue prompt when exceptionHandling() is called.
+
+Added.lower() to exit command so that variances in capitalization do not throw exceptionHandle()
+
+Deleted old TEST command else statement.
+
+
+
+(01/09/17)
+
+Added username confirmation block
+
+Added username confirmation exception handeling for invalid response to confirmation
+
+Added timeHandle() so as to print date and time. *Will add additional formatting at a later time.
+
+Fixed issue where during secondary confirmation of gameplay, if you stated you did not want to continue, it threw exceptionHandle()
+
+
+(01/10/17)
+
+Changed timeHandle() to callTime()
+
+added "time" command
+
+Added beginning GUI code
+
+(01/12/17)
+
+Added RPS.ico *Unfortunately, it needs to be put directly into the folder containing RPS.py
+
+Added and implemented more GUI coding.
+
+
+(05/15/17)
+
+Corrected "while" command error

@@ -11,23 +11,39 @@ from tkinter import *
 
 def mainGame():
         #Subfunctions
+        #customTimeDelay = input("Please input script delay according to taste. Input number between 0.1 - 5. (0.5 is recommended)")
         def callTime():
                 today = datetime.today()
                 todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
                 todayClock = ('%s:%s:%s' % (today.hour, today.minute, today.second))
                 print (todayCal)
-                time.sleep(0.5)
+                timeLapse()
                 print(todayClock)
-                time.sleep(0.5)
+                timeLapse()
+        def timeLapse():
+            print("     ")
+            time.sleep(0.5)
 
         def exceptionHandle():
                 userAnswerCont = False
                 while userAnswerCont == False:
                         print("Invalid Answer.")
-                        time.sleep(0.5)
+                        timeLapse()
                         print("Please try again.")
-                        time.sleep(.5)
+                        timeLapse()
                         break
+        def versionNumber():
+            versionNumberVar = "0.2.2"
+            print("Version" + versionNumberVar)
+            print('Version number should be read as "MAJOR#.MINOR#.UPDATE#" ')
+            timeLapse()
+
+        def bugList():
+            print("List of Known Bugs: ")
+            print("#1 Selecting Paper is not handleing correctly. Paper does not cover Scissors.")
+            print("#2 Entire program does not use classes appropriately.")
+            timeLapse()
+
 
     #    ######------GUI SECTION---------#########
         #www.usingpython.com/using-tkinter/   used to help build section
@@ -66,6 +82,8 @@ def mainGame():
         nonPlayer = randomLetter1 + randomLetter2 + randomNumber1 + randomNumber2 + randomNumber3 + randomNumber4
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
         callTime()
+        versionNumber()
+        bugList()
         confirmUsername = False
         while confirmUsername == False:
                 userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
@@ -79,9 +97,9 @@ def mainGame():
                         exceptionHandle()
         playGame = "y"
         while playGame == "y":
-                time.sleep(0.5)
+                timeLapse()
                 print ("Hello, " + userNameA + ". My name is " + nonPlayer +". Are you ready to play?")
-                time.sleep(0.5)
+                timeLapse()
                 confirmGame = input("Y/N?    ")
                 if confirmGame.lower().startswith("y"):
                         print ("Then let us begin " + userNameA + ".")
@@ -92,18 +110,18 @@ def mainGame():
                         if confirmExit.lower().startswith('n'):
                                 print("Alright, then let us continue.")
                                 print("           ")
-                                time.sleep(0.5)
+                                timeLapse()
                                 break
                         
                         elif confirmGame.lower().startswith('y'):
                                 print("Goodbye " + userNameA+".")
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("Exiting in 3....")
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("2..")
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("1.")
-                                time.sleep(0.5)
+                                timeLapse()
                                 exit()
                         else:
                                 exceptionHandle()
@@ -150,56 +168,56 @@ def mainGame():
 
 #If game is TIED
                 if userAnswer.lower() == botAnswer.lower():
-                        time.sleep(0.5)
+                        timeLapse()
                         print ("Tie!")
 #If player chooses ROCK --------------------------------------------------------------------------
                 elif userAnswer.lower().startswith("ro"):
                         if botAnswer == 'p':
-                                time.sleep(0.5)
+                                timeLapse()
                                 print ("You lose! " + 'Paper' + ' covers ' + 'rock' + "!")
                                 botScore = botScore + 1
                         else:
-                                time.sleep(0.5)
+                                timeLapse()
                                 print ("You win! " + 'Rock' + ' smashes ' + 'scissors' + "!")
                                 userScore = userScore + 1
 #If player chooses PAPER -------------------------------------------------------------------------
                 elif userAnswer.lower().startswith('pa'):
                         if botAnswer == 's':
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("You lose! " + 'Scissors' + ' cut ' + 'paper' + "!")
                                 botScore = botScore + 1
                         else:
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("You win! " + 'Paper' + ' covers ' + 'scissors' + "!")
                                 userScore = userScore + 1
 #If player chooses SCISSORS ---------------------------------------------------------------------
                 elif userAnswer.lower().startswith('sc'):
                         if botAnswer == 'r':
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("You lose... " + 'Rock' + ' smashes ' + 'scissors' + "!")
                                 botScore = botScore + 1
                         else:
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("You win! " + 'Scissors ' +'cut ' + 'paper' + "!")
                                 userScore = userScore + 1
 #If player invokes EXIT command ----------------------------------------------------------------
                 elif userAnswer.lower() == 'exit':
-                                time.sleep(0.5)
+                                timeLapse()
                                 print("Goodbye " + userNameA + "!" )
                                 exit()
 #TESTING-----------------------------------------------------------------------------------------                                
 
 #This is to restart game, giving the option for new enemy, and to input new username. ----------
                 elif userAnswer.lower() == 'restart':
-                        time.sleep(0.5)
+                        timeLapse()
                         print ("RESTARTING....")
-                        time.sleep(0.5)
+                        timeLapse()
                         mainGame()
 
 
 #This is to RESET scores. ---------------------------------------------------------------------
                 elif userAnswer.lower().startswith('reset'):
-                        time.sleep(0.5)
+                        timeLapse()
                         print ("Score has been reset for both players.")
                         userScore = 0
                         botScore = 0
@@ -209,42 +227,42 @@ def mainGame():
 
 #Subtracts -1 to the opponent's score. For DEV purposes only and should not be displayed.-----
                 elif userAnswer == 'minusb':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("One point subtracted from " + nonPlayer)
                         botScore = botScore -1
 
 #Subtracts -1 to the player's score. For DEV purposes only and should not be displayed.-------
                 elif userAnswer == 'minusp':
-                        time.sleep(0.5)
+                        timeLapse()
                         print ("One point subtracted from " + userNameA)
                         userScore = userScore -1
 #Adds +1 to opponent's score. For DEV purposes only and should not be displayed. -------------
                 elif userAnswer == 'givve':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("One point added to " + nonPlayer)
-                        time.sleep(0.5)
+                        timeLapse()
                         botScore = botScore + 1
 #Adds +1 to player's score. For DEV purposes only and should not be displayed. --------------
                 elif userAnswer == 'gimme':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("One point added to " + userNameA)
-                        time.sleep(1)
+                        timeLapse()
                         userScore = userScore + 1
 #Drops Player score to zero. For DEV purposes only and should not be displayed. ------------
                 elif userAnswer == 'surrender':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("Your hand shakes as you give into the opponent's fury.")
                         userScore = 0
                         userAnswer = False
 #Drops opponent score to zero. For DEV purposes only and should not be displayed. ---------
                 elif userAnswer == 'nuke':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("Your opponent feels the heat of the bomb dropped.")
                         botScore = 0
                         userAnswer = False
 #prints DEV commands. ---------------------------------------------------------------------
                 elif userAnswer == 'dev':
-                        time.sleep(0.5)
+                        timeLapse()
                         print("       ")
                         print("GIVVE ---- Adds one point to OPPONENT.")
                         print("GIMME ---- Adds one point to PLAYER.")
@@ -275,31 +293,17 @@ def mainGame():
 
                 if botScore >= userScore + (userScore * .5) and botScore >= 3:
                         print (nonPlayer + " says: " + randTaunt)
-                        time.sleep(1)
+                        timeLapse()
                 elif userScore >= botScore + (botScore * .5) and userScore >=3:
                         print (nonPlayer + " says: " + randDefeat)
-                        time.sleep(1)
+                        timeLapse()
                 else:
                         userAnswer = False
                         print("     ")
 
-
-
-
-
-
 mainGame()
 
-
-#######----------- FUTURE FEATURES -------------------------------------------------------------------------------------------------------------------------------------
-                #SETTINGS MENU that will change the nature of the game when accessed. Game will default to normal settings if not invoked.
-                #Options to choose BEST OUT OF THREE, BEST OUT OF TEN, UNLIMITED, or 1 ROUND.
-                #Option to keep highschore on unlimited setting using locally stored text file?
-                #Option to choose 1, 2, 3, or Arrow keys to correlate with rock paper or scissors
-                #Optional TIE = DIE mode where tieing in game causes score to either RESET or subtract from both players.
-                #TUG OF WAR gamemode where TIEING causes you to steal the opponent's current score.
                 
-                #Implement Graphical User Interface
 
 
 
