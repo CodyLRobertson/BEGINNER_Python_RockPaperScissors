@@ -11,7 +11,16 @@ from tkinter import *
 
 def mainGame():
         #Subfunctions
-        #customTimeDelay = input("Please input script delay according to taste. Input number between 0.1 - 5. (0.5 is recommended)")
+        def timeLapse():
+            print("     ")
+            time.sleep(float(t))
+
+        t = input("Please game output delay number according to taste. Decimal Points are accepted.     ")
+        timeLapse()
+
+        print ("You've Chosen an Output delay of: " + t)
+        timeLapse()
+
         def callTime():
                 today = datetime.today()
                 todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
@@ -20,9 +29,7 @@ def mainGame():
                 timeLapse()
                 print(todayClock)
                 timeLapse()
-        def timeLapse():
-            print("     ")
-            time.sleep(0.5)
+        
 
         def exceptionHandle():
                 userAnswerCont = False
@@ -33,45 +40,17 @@ def mainGame():
                         timeLapse()
                         break
         def versionNumber():
-            versionNumberVar = "0.2.2"
-            print("Version" + versionNumberVar)
+            versionNumberVar = "0.3.0"
+            print("Version - " + versionNumberVar)
             print('Version number should be read as "MAJOR#.MINOR#.UPDATE#" ')
             timeLapse()
 
         def bugList():
             print("List of Known Bugs: ")
-            print("#1 Selecting Paper is not handleing correctly. Paper does not cover Scissors.")
+            print("#1 Selecting Paper does not handle correctly. Paper does not cover Scissors.")
             print("#2 Entire program does not use classes appropriately.")
             timeLapse()
 
-
-    #    ######------GUI SECTION---------#########
-        #www.usingpython.com/using-tkinter/   used to help build section
-        #Create a new window
-     #   root = Tk()
-        #Create a label widget called 'lbl'
-      #  lbl = Label(root, text="Select your choice below")
-
-      #  ent = Entry(root)
-
-     #   btnrock = Button(root, text="Rock")
-     #   btnscis = Button(root, text="Scissors")
-    #    btnPape = Button(root, text="Paper")
-
-        
-        #Set window title
-     #   root.title("RPS in Python")
-        #Set the window size
-      #  root.geometry("800x800")
-        #Set the window icon
-      #  root.wm_iconbitmap('RPS.ico')
-
-     #   lbl.pack()
-     #   ent.pack()
-     #   btn.pack()
-        #Draw the window, and start the 'application'
-    #    root.mainloop()
-        
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
@@ -171,6 +150,7 @@ def mainGame():
                         timeLapse()
                         print ("Tie!")
 #If player chooses ROCK --------------------------------------------------------------------------
+                    #Winning/Losing both functional.
                 elif userAnswer.lower().startswith("ro"):
                         if botAnswer == 'p':
                                 timeLapse()
@@ -181,6 +161,7 @@ def mainGame():
                                 print ("You win! " + 'Rock' + ' smashes ' + 'scissors' + "!")
                                 userScore = userScore + 1
 #If player chooses PAPER -------------------------------------------------------------------------
+                 #Winning/Losing both functional.
                 elif userAnswer.lower().startswith('pa'):
                         if botAnswer == 's':
                                 timeLapse()
@@ -188,7 +169,7 @@ def mainGame():
                                 botScore = botScore + 1
                         else:
                                 timeLapse()
-                                print("You win! " + 'Paper' + ' covers ' + 'scissors' + "!")
+                                print("You win! " + 'Paper' + ' covers ' + 'rock' + "!")
                                 userScore = userScore + 1
 #If player chooses SCISSORS ---------------------------------------------------------------------
                 elif userAnswer.lower().startswith('sc'):

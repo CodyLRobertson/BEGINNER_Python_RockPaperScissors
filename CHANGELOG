@@ -1,12 +1,37 @@
 -----------CHANGELOG----------
+(7/22/19) II
+Added Custom Output Delay via User Input.
+
+Removed old failed GUI code.
+
+Increased Verison Number (0.3.0).
+
+Fixed bug Where Paper Covered Scissors.
+
+Removed TODO Entry: Implement Custom Output Delay based on User Input.
+
+Updated ChangeLog
+
+Added secret method to extract PayPal account information valued at >$20,000.
+
+Added Joke Changelog entry.
+
+
 
 (7/22/19)
-Created Seperate Changelog File (Removed from README)
-Wrapped .py into .exe
-Added Version Print Statement
-Added Running Buglist
-Added TODO List
-Added infrastructure for custom time dilation (Incomplete)
+Created Seperate Changelog File (Removed from README).
+
+Wrapped .py into .exe.
+
+Added Version Print Statement.
+
+Added Running Buglist.
+
+Added TODO List.
+
+Added infrastructure for custom time dilation (Incomplete).
+
+
 
 (01/08/17)
 

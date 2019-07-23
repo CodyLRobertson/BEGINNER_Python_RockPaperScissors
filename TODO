@@ -1,6 +1,7 @@
 --------------TODO-------------
 Immediate--
-Add custom time dilation based on user input (customTimeVar)
+Convert Newest Updated Program into .EXE
+Look into remote updating instead of manual re-compiling program.
 
 FUTURE---
 #SETTINGS MENU that will change the nature of the game when accessed. Game will default to normal settings if not invoked.
