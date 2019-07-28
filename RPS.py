@@ -15,10 +15,10 @@ def mainGame():
             print("     ")
             time.sleep(float(t))
 
-        t = input("Please game output delay number according to taste. Decimal Points are accepted.     ")
+        t = input("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
         timeLapse()
 
-        print ("You've Chosen an Output delay of: " + t)
+        print ("You've chosen an output delay of " + t +' seconds.')
         timeLapse()
 
         def callTime():
@@ -40,7 +40,7 @@ def mainGame():
                         timeLapse()
                         break
         def versionNumber():
-            versionNumberVar = "0.3.0"
+            versionNumberVar = "0.3.4"
             print("Version - " + versionNumberVar)
             print('Version number should be read as "MAJOR#.MINOR#.UPDATE#" ')
             timeLapse()
@@ -62,7 +62,7 @@ def mainGame():
 #Acquires username and play confirmation. --------------------------------------------------------------------------------
         callTime()
         versionNumber()
-        bugList()
+      #  bugList()
         confirmUsername = False
         while confirmUsername == False:
                 userNameA = input("Welcome to Rock, Paper, Scissors! What is your name?  ")
