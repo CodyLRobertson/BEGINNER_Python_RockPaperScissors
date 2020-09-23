@@ -1,9 +1,3 @@
-
-#RPS Rock Paper Scissors
-#VERSION 0.3.4
-
-
-#Import List
 import time
 import random
 import string
@@ -19,11 +13,14 @@ def mainGame():
         #Subfunctions
         def timeLapse():
             print("     ")
-            time.sleep(float(outputDelay))
-        outputDelay = input("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
+            time.sleep(float(t))
+
+        t = input("Please game output delay number according to taste (in seconds). Decimal Points are accepted.")
         timeLapse()
-        print ("You've chosen an output delay of " + outputDelay +' seconds.')
+
+        print ("You've chosen an output delay of " + t +' seconds.')
         timeLapse()
+
         def callTime():
                 today = datetime.today()
                 todayCal = ('%s/%s/%s' % (today.month, today.day, today.year))
@@ -32,6 +29,8 @@ def mainGame():
                 timeLapse()
                 print(todayClock)
                 timeLapse()
+        
+
         def exceptionHandle():
                 userAnswerCont = False
                 while userAnswerCont == False:
@@ -45,11 +44,13 @@ def mainGame():
             print("Version - " + versionNumberVar)
             print('Version number should be read as "MAJOR#.MINOR#.UPDATE#" ')
             timeLapse()
+
         def bugList():
             print("List of Known Bugs: ")
             print("#1 Selecting Paper does not handle correctly. Paper does not cover Scissors.")
             print("#2 Entire program does not use classes appropriately.")
             timeLapse()
+
 #This is to generate a random numbers and letters to be put together for nonPlayer (bot name)------------------------------
         randomNumber1 = str((random.randint(0,9)))
         randomNumber2 = str((random.randint(0,9)))
